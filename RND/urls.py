@@ -19,8 +19,9 @@ from django.urls import path, include  # Include for app urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('myapp.urls')),  # Include app's urls
-    path('', include('app_name.urls')),
+    path('myapp', include('myapp.urls')),  # Include app's urls
+    path('app_name', include('app_name.urls')),
+     path('', include('myapp.urls')),  # Default root route
 ]
 
 
